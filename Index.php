@@ -32,22 +32,24 @@
             <h1>temp popular</h1>
 
             <?php
-            $sql = "SELECT * FROM user ";
-            $sql .= "ORDER BY userID";
+            $sql = "SELECT * FROM movie ";
+            $sql .= "ORDER BY movieID";
             $result_set = mysqli_query($db,$sql);
             ?>
 
             <table>
                 <tr>
-                    <th>userID</th>
-                    <th>Name</th>
-                    <th>Password</th>
+                    
+                    <th>Title</th>
+                    <th>Year of Release</th>
+                    <th>Length</th>
                 <tr>
             <?php while($results = mysqli_fetch_assoc($result_set)) { ?> 
                 <tr>
-                    <td><?php echo $results['userID']; ?></td>
-                    <td><?php echo $results['username']; ?></td>
-                    <td><?php echo $results['Password']; ?></td>
+                    
+                    <td><?php echo $results['title']; ?></td>
+                    <td><?php echo $results['yearCreated']; ?></td>
+                    <td><?php echo $results['length']; ?> minutes</td>
             </tr>
                        
             <?php } ?>
