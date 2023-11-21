@@ -82,7 +82,14 @@ body {/*set background colour, font colour, and font family along with the line 
     
     
 }
-
+#popularwrap{
+    background-color: #CcCACA;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+}
 
 
 button{/*this modifies any buttons to have a near black backround and white text along with having padding on each side so i can put multiple buttons beside eachother*/

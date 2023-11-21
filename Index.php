@@ -14,7 +14,7 @@
     require_once('database.php');
 
     $db = db_connect();
-    //$page_title = 'Employee'; ?>
+    ?>
         <header>
             
             
