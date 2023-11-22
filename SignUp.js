@@ -1,35 +1,41 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("SignUp").addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        var email = document.getElementById('email').value;
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert("Email is empty or not in the correct format")
-            return  false;
-        }
-
-    var username = document.getElementById('username').value;
-
-    //Check for empty input or excessively long login name
-    if (username.length < 8 || username.length >= 30) {
-        alert("Username has to be longer or equal to 8 and less than 30 characters")
+function validate() {
+    let Uname = document.getElementById('username').value;
+    let pass1 = document.getElementById('password').value;
+    
+    if (Uname.trim().length === 0 || Uname === null){ //make sure there is text in username input
+        alert("A username must be filled out");
+        return false;
+    }
+    else if(Uname.trim().length > 30){ //make sure username is less than 30 characters long
+        alert('Username must be less than 30 characters long.');
         
         return false;
     }
-
-    var pass = document.getElementById('password').value;
-
-    //Check for a minimum password length
-    if (pass.length < 8) {
-
-        alert("Password should be at least 8 characters");
+    else if(Uname.trim().length < 8){
+        alert('Username must be more than 7 characters long.');
+        
         return false;
-
     }
+    else{
+    };
 
-        return true;
-
-    });
-});
+    if(pass1.trim().length < 8){ //make sure password is more than 8 characters long
+        alert('Password must be more than 8 characters long.');
+        
+        
+        return false;
+    }
+    else{
+        
+        };
+    if(pass1.trim().length === 0 || pass1 === null){ //makes sure both passwords are not empty
+        alert('Password must not be blank.');
+        
+        return false;
+    }
+    else{
+        
+    
+    
+}
+}

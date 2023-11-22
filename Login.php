@@ -23,13 +23,15 @@ $db = db_connect();
         if(mysqli_num_rows($result)===1)
         {
             //username is stored to seesion and forward to next page
-            $_SESSION["myuser"]= $unamefinal;
+            $_SESSION["myuser"]= $namefinal;
             header("location: Index.php");
             
         } else {
             //error is shown
-            $_SESSION["error"]="you are not a valid user";
-            header("location: missing.html");
+            echo '<script type="text/JavaScript">  
+            alert("username or password is incorrect");
+                 </script>' ;
+            header("location: SignIn.html");
             
     }
 };
