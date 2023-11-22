@@ -5,7 +5,7 @@ header {
     text-align: center;
     padding: 1rem 0;
     padding-bottom: 1px;  
-    background-color: #8b8b8b;
+    background-color: #664245;
     
     .nav_list{ /* this modifies the navigation list inside the header element*/
         display: inline;
@@ -49,7 +49,7 @@ header {
         padding-right: 10px;
         padding-top: 5px;
         padding-bottom: 5px;        
-        border-radius: 35px;
+        border-radius: 15px;
         border-width: 2px;
     }
     #searchbutt{  /* adds the padding to the search button */
@@ -61,19 +61,29 @@ header {
         border-color: #000000;
         border-style:solid;
         border-width: 2px;
+        transition: all 100ms;
+    }
+    #ulist:hover{  /* adds the background colour and border to the "my movie list" */
+        background-color: #C1B8B8;
+        
     }
     #signbutt, #searchbutt, .nav_list{ /* adds the background colour and border to the navigation, sign in button and search button */
-        background-color: #4CFFE7;
+        background-color: #BF3944;
         border-color: #000000;
         border-style:solid;
         border-width: 2px;
+        transition: all 100ms;
+    }
+
+    #signbutt:hover, #searchbutt:hover, .nav_list:hover{ /* adds the background colour and border to the navigation, sign in button and search button */
+        background-color: #E53947;
     }
     
 }
 
 body {/*set background colour, font colour, and font family along with the line height */
     all: revert; 
-    background-color: #E8E8E8;
+    background-color: #5F5959;
     color: #000000;
     font-family: 'Exo 2', sans-serif;
     line-height: 1.6;
