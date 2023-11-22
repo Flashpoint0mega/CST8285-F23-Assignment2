@@ -16,7 +16,7 @@ header {
         padding-right: 10px;
         padding-top: 5px;
         padding-bottom: 5px;        
-        border-radius: 35px;
+        border-radius: 15px;
     }
 
     #sitename a{ /* I wanted the site name in between the links to the other pages so this is basically the styling for the nav but without the background color */
