@@ -15,7 +15,7 @@ if(!empty($_POST['lstBox1']))
 	#}
 
 
-    $currentUser = $_SESSION['userID'];
+    $currentUser = $_SESSION['myuser'];
     $currentAction = $_SESSION['action'];
 
 

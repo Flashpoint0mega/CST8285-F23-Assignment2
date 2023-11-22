@@ -6,7 +6,7 @@
     session_start();
     $currentUserID = 1;
 
-    $_SESSION['userID'] = $currentUserID;
+    $_SESSION['myuser'] = $currentUserID;
     $_SESSION['action'] = "ADD";
   
 
