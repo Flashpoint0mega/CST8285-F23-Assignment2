@@ -9,6 +9,7 @@ session_start();
         <!--css used-->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styleSign.css">
+        <!-- JS used -->
         <!--<script src="SignIn.js"></script> -->
         
     </head>  
@@ -24,9 +25,11 @@ session_start();
             </nav>
     
         </header>
-    <div id="signwrap">
+    <div id="signwrap"> <!-- wrapper for the sign up fourm -->
         <h2>Sign In:</h2>
         <form method="post" action="Login.php" id="Login" onsubmit="return validate();">
+        <!-- when user clicks submit, it will send this data through the SignIn.js 
+            file and make sure the data is fine before sending it to the Login.php file-->
 
             <input type="text" placeholder="Username or Email:" id="username" name="Uname"  autocomplete="off"><br>
             <input type="password" placeholder="Password:" id="password" name="Pass"  autocomplete="new-password"><br>
@@ -36,11 +39,16 @@ session_start();
 
         </form>
         <p id="error"><?php if (isset($_SESSION["error"])) {
+            /*
+             *this display's an error message, if there is one, so far the only redirects to here are from this page 
+             *itself or the userlist page if the user is not logged in
+             */
                     echo $_SESSION["error"] ;
                 } else {
-                    echo '';
+                    echo ''; //empty string if there is no error
                 }
         ?></p>
+        <!-- if user does not have an account, they can make one here-->
         <p id="Dont">Don't have an account?<br><a id="NoAcc" href="SignUp.html">Sign Up</a></p>
     </div>
     

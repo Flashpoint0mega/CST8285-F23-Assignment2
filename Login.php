@@ -1,6 +1,6 @@
 <?php
-session_start(); 
-require_once('db_credentials.php');
+session_start(); //starts a session, this is to save the username for later
+require_once('db_credentials.php'); //gets the cradentials for the database then connects to the database
 require_once('database.php');
 
 $db = db_connect();
@@ -9,18 +9,18 @@ $db = db_connect();
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $name = $_POST["Uname"];
         $pass = $_POST["Pass"];
-        $nametrim = trim($name);
-        $passtrim = trim($pass);
-        $namefinal = stripcslashes($nametrim);
-        $passfinal = stripcslashes($passtrim);
+        $nametrim = trim($name);//trims whitespace on ends of text if there is any
+        $passtrim = trim($pass);//trims whitespace on ends of text if there is any
+        $namefinal = stripcslashes($nametrim); //removes slashes in username
+        $passfinal = $passtrim;
+        //origianlly thought that i should strip slashes out of password but realized that could be bad, 
+        //kept name cuz passfinal is a good variable name
 
-
+            //checks if there is a user with the username and password the user typed
             $sql = "SELECT * FROM user WHERE username = '$namefinal' AND Password = '$passfinal'";
-        $result = mysqli_query($db, $sql);
-        // For INSERT statements, $result is true/false
-            
+        $result = mysqli_query($db, $sql);        
         
-        if(mysqli_num_rows($result)===1)
+        if(mysqli_num_rows($result)===1)//if there is one row, there is a match, if there's more than one row somehting went wrong somewhere
         {
             //username is stored to seesion and forward to next page
             $_SESSION["myuser"]= $namefinal;
@@ -28,7 +28,7 @@ $db = db_connect();
             header("location: Index.php");
             
         } else {
-            //error is shown
+            //error is shown on Signup page
             $_SESSION["error"]="incorrect Username or Password";
             header("location: SignIn.php");
             
