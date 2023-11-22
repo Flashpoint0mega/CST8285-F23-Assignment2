@@ -50,9 +50,10 @@
                     <td><?php echo $results['title']; ?></td>
                     <td><?php echo $results['yearCreated']; ?></td>
                     <td><?php echo $results['length']; ?> minutes</td>
-            </tr>
+                </tr>
                        
             <?php } ?>
+            </table>
 
 
         </div>
