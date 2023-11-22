@@ -1,10 +1,21 @@
 #contentwrap{
     background-color: #CcCACAa0;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+h1{
+    padding-bottom: 3%;
 }
 table{
-    width: 100%
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+img{
+    height: 136px;
+    width: 96px;
+    padding-top: 3%;
+    padding-bottom:  3%;
 }

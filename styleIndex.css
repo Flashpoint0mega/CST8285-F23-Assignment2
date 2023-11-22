@@ -3,12 +3,23 @@
     margin-top: 10px;
     margin-left: 15%;
     margin-right: 15%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 #popularwrap h1{
     padding-bottom: 5px;
 }
 table{
-    width: 100%
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.movierow{
+    padding: 3%;
+}
+img{
+    height: 136px;
+    width: 96px;
+    padding-top: 3%;
+    padding-bottom:  3%;
 }
