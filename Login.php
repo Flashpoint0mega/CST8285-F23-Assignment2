@@ -24,14 +24,13 @@ $db = db_connect();
         {
             //username is stored to seesion and forward to next page
             $_SESSION["myuser"]= $namefinal;
+            $_SESSION["error"]="";
             header("location: Index.php");
             
         } else {
             //error is shown
-            echo '<script type="text/JavaScript">  
-            alert("username or password is incorrect");
-                 </script>' ;
-            header("location: SignIn.html");
+            $_SESSION["error"]="incorrect Username or Password";
+            header("location: SignIn.php");
             
     }
 };

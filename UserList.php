@@ -25,7 +25,7 @@ session_start();
             <p id="sitename"><a href="Index.php">Site Name</a></p>
             <div class="sidebutton">
                 <p id="ulist"><a href="UserList.php"> My Movie List </a></p>
-                <p id="signbutt"><a href="SignIn.html"> <?php if (isset($_SESSION["myuser"])) {
+                <p id="signbutt"><a href="SignIn.php"> <?php if (isset($_SESSION["myuser"])) {
                     echo $_SESSION["myuser"] ;
                 } else {
                     echo 'Sign in';
