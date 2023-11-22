@@ -93,6 +93,7 @@ button{/*this modifies any buttons to have a near black backround and white text
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     cursor: pointer;
+    margin: 10px;
 }
 a{/*makes the hyperlinks inline and not have any colour to them*/
     display: inline;

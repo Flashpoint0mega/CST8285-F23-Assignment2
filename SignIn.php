@@ -35,7 +35,7 @@ session_start();
             <button type="submit" onclick="">Sign In</button>
 
         </form>
-        <p><?php if (isset($_SESSION["error"])) {
+        <p id="error"><?php if (isset($_SESSION["error"])) {
                     echo $_SESSION["error"] ;
                 } else {
                     echo '';

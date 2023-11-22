@@ -19,5 +19,9 @@ header { /* add padding to the bottom of the header */
             
 }
 #Dont{
-    padding-top: 10%;
+    padding-top: 2.5%;
+}
+#error{
+    color:red;
+    font-weight: bold;
 }

@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (isset($_SESSION["myuser"])) {
+    
+} else {
+    $_SESSION["error"]="Please sign in to access your list";
+    header("location: SignIn.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
