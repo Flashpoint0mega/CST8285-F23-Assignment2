@@ -67,7 +67,12 @@
                 echo "</select>";
 
                 #button
-                echo "<br><input value='Add' type='Submit' />";
+                if(isset($_SESSION["userID"])){
+                    echo "<br><input value='Add' type='Submit' />";
+                }
+                else {
+                    echo "<br><p>please sign in to add movies to your list</p>";
+                }
             } else {
 
                 # replace with better message
