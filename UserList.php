@@ -46,36 +46,12 @@ if (isset($_SESSION["myuser"])) { //if user is not logged in, they can't access 
             </div>
         </header>
         <div id="contentwrap">
-            <h1>temp List</h1>
-            <?php //querry to get all the movies user has added to their list
-            $sql = "SELECT movie.movieID, movie.title, movie.yearCreated, movie.Length, genre.genre_name, concat(director.firstName, ' ', director.lastName) AS director, user.username FROM movie_genre JOIN movie ON movie_genre.movieID = movie.movieID JOIN genre ON movie_genre.GenreID = genre.GenreID JOIN movie_director ON movie.movieID = movie_director.movieID JOIN director ON movie_director.directorID = director.directorID JOIN movieuser ON movie.movieID = movieuser.movieID JOIN user ON movieuser.userID = user.userID WHERE user.username = '$_SESSION[myuser]' ";
-            $result_set = mysqli_query($db,$sql);
-            ?>
-
-<table>
-                <tr class="movierow">
-                    <th></th>
-                    <th>Title</th>
-                    <th>Year of Release</th>
-                    <th>Length</th>
-                    <th>Genre</th>
-                    <th>Director</th>
-                    <th>Rating</th>
-                <tr>
-            <?php while($results = mysqli_fetch_assoc($result_set)) { ?>  <!-- while there are results, write this code -->
-                <tr class="movierow">
-                    <!-- puts the movieID as the link to the poster so we can use the same numbering sceme for every photo -->
-                    <td><img src="posters/<?php echo $results['movieID']; ?>.png"></td> 
-                    <td><?php echo $results['title']; ?></td>
-                    <td><?php echo $results['yearCreated']; ?></td>
-                    <td><?php echo $results['Length']; ?> minutes</td>
-                    <td><?php echo $results['genre_name']; ?></td>
-                    <td><?php echo $results['director']; ?></td>
-                    <td>NULL</td>
-                </tr>
-                       
-            <?php } ?>
-            </table>
+            <?php 
+            require 'SaveSelections.php';
+            include 'connectToDb.php';
+            $conn = OpenCon();
+            $currentUser = $_SESSION["myuser"];?>
+            <?php displayMovies($result, $currentUser, $conn) ?>
         </div>
     
     

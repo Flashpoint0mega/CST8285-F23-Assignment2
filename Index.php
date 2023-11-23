@@ -49,46 +49,16 @@ $_SESSION["error"]="";
                 <p id="searchbutt"><a href="Search.php">🔍</a></p>
             </div>
         </header>
+        <form method="POST">
         <div id="popularwrap"> 
-            <!-- this part has the "currently popular movies" which is a arbirtary set of movies just for show right now -->
-            <h1>temp popular</h1>   
-            <form method="POST">
-            <!-- logout button -->
-            <input type="submit" name="button1" class="button" value="logout" /> 
+        </form>
+        <input type="submit" name="button1" class="button" value="logout" />
+        <p>userID:<?php if (isset($_SESSION['userID'])) {
+            echo $_SESSION['userID'];} 
+            else { echo ' Not signed in';}?></p>
 
-            <?php //getss all the movies in the movie table of the database, will make this more specific later
-            /* old
-            $sql = "SELECT * FROM movie ";
-            $sql .= "ORDER BY movieID";
-            */
-            $sql = "SELECT movie.movieID, movie.title, movie.yearCreated, movie.Length, genre.genre_name, concat(director.firstName, ' ', director.lastName) AS director FROM movie_genre JOIN movie ON movie_genre.movieID = movie.movieID JOIN genre ON movie_genre.GenreID = genre.GenreID JOIN movie_director ON movie.movieID = movie_director.movieID JOIN director ON movie_director.directorID = director.directorID;";
-            $result_set = mysqli_query($db,$sql); //uses the querry with the databse and store the result
-            ?>
 
-            <table>
-                <tr class="movierow">
-                    <th></th>
-                    <th>Title</th>
-                    <th>Year of Release</th>
-                    <th>Length</th>
-                    <th>Genre</th>
-                    <th>Director</th>
-                    <th>Rating</th>
-                <tr>
-            <?php while($results = mysqli_fetch_assoc($result_set)) { ?>  <!-- while there are results, write this code -->
-                <tr class="movierow">
-                    <!-- puts the movieID as the link to the poster so we can use the same numbering sceme for every photo -->
-                    <td><img src="posters/<?php echo $results['movieID']; ?>.png"></td> 
-                    <td><?php echo $results['title']; ?></td>
-                    <td><?php echo $results['yearCreated']; ?></td>
-                    <td><?php echo $results['Length']; ?> minutes</td>
-                    <td><?php echo $results['genre_name']; ?></td>
-                    <td><?php echo $results['director']; ?></td>
-                    <td>NULL</td>
-                </tr>
-                       
-            <?php } ?>
-            </table>
+            <?php require 'popularMovies.php'?>
 
 
         </div>
