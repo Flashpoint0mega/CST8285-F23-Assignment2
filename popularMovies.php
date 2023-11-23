@@ -18,7 +18,11 @@
     }
     
     # get userid from username and save it into sesion - needed on other pages
-    $_SESSION["userID"];
+    if(isset($_SESSION["userID"])){
+        $_SESSION["userID"];
+    } else {
+        
+    }
     
     
     displayMovies($result, $currentUser, $conn);
