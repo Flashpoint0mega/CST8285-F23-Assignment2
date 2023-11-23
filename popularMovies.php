@@ -55,7 +55,7 @@
             #  if any records returned, create listbox
             if ($result->num_rows > 0) {
                 # header - replace if necessary
-                echo "<h1>Users List of Movies</h1>";
+                echo "<h1>Popular Movies</h1>";
 
                 # declare listbox as multi select
                 echo "<select multiple='multiple' name='lstBox1[]' id='lstBox1' class='form-control'>";

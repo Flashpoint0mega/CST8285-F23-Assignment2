@@ -147,7 +147,7 @@ function displayMovies(&$result, $currentUser, $conn)
             #button
             echo "<br><input value='Remove' type='Submit' />";
 
-            echo "<br><a href='Index.php'>Go Back</a>";
+            
         } else {
 
             # replace with better message

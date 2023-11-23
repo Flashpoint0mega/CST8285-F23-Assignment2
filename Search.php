@@ -15,7 +15,7 @@ session_start();
         <header>
             
             
-            <p id="sitename"><a href="Index.php">Site Name</a></p>
+            <p id="sitename"><a href="Index.php">My Movie List</a></p>
             <div class="sidebutton">
                 <p id="ulist"><a href="UserList.php"> My Movie List </a></p>
                 <p id="signbutt"><a href="SignIn.html"> <?php if (isset($_SESSION["myuser"])) {

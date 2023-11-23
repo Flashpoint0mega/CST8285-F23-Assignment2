@@ -29,9 +29,9 @@ if (isset($_SESSION["myuser"])) { //if user is not logged in, they can't access 
         <header>
             
             
-            <p id="sitename"><a href="Index.php">Site Name</a></p>
+            <p id="sitename"><a href="Index.php">My Movie List</a></p>
             <div class="sidebutton">
-                <p id="ulist"><a href="UserList.php"> My Movie List </a></p>
+                
                 <p id="signbutt"><a href="SignIn.php"> <?php if (isset($_SESSION["myuser"])) {
                     //if user is logged in changes the sign in button to show their username, will change this to the log in button during finalization
                     echo $_SESSION["myuser"] ; //'myuser' is the variable name for the users name and credentials
