@@ -56,10 +56,10 @@ $_SESSION["error"]="";
         <p>userID:<?php if (isset($_SESSION['userID'])) {
             echo $_SESSION['userID'];} 
             else { echo ' Not signed in';}?></p>
-
-
+            
+            
             <?php require 'popularMovies.php'?>
-
+            <?php include 'movietable.php'?>            
 
         </div>
     

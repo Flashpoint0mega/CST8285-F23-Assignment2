@@ -52,7 +52,9 @@ if (isset($_SESSION["myuser"])) { //if user is not logged in, they can't access 
             $conn = OpenCon();
             $currentUser = $_SESSION["myuser"];?>
             <?php displayMovies($result, $currentUser, $conn) ?>
+            <?php include 'Umovietable.php'?>
         </div>
+        
     
     
     

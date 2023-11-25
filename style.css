@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap'); /*this imports the font Exo 2 so that I can use it on this website*/
-
+/*this imports the font Exo 2 so that I can use it on this website*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap'); 
 
 header {
     text-align: center;
@@ -94,7 +94,9 @@ body {/*set background colour, font colour, and font family along with the line 
 }
 
 
-button{/*this modifies any buttons to have a near black backround and white text along with having padding on each side so i can put multiple buttons beside eachother*/
+button{/* this modifies any buttons to have a near black backround and white text 
+        * along with having padding on each side so i can put multiple buttons beside eachother
+        */
     background-color: #333333;
     color: #ffffff;
     border: none;
@@ -105,18 +107,21 @@ button{/*this modifies any buttons to have a near black backround and white text
     cursor: pointer;
     margin: 10px;
 }
-a{/*makes the hyperlinks inline and not have any colour to them*/
+a{ /*makes the hyperlinks inline and not have any colour to them*/
     display: inline;
     text-decoration: none;
     margin: auto; 
 }
-a, a:visited, a:hover, a:active {/*gets rid of the ugly blue and purple colours of the hyperlinks on the page by telling it to 
-                                    inherit the colour of the text in the body element*/
+a, a:visited, a:hover, a:active {
+    /* gets rid of the ugly blue and purple colours of the hyperlinks on the page by telling it to 
+     * inherit the colour of the text in the body element
+     */
     color: inherit;
   }
 
-#NoAcc{/*I wanted the hyperlink to the sign up / sign in to be underlines so people knew they could click on it so I had 
-        to add this rule for the element with the id "NoAcc"*/
+#NoAcc{/* I wanted the hyperlink to the sign up / sign in to be underlines so people knew they  
+        * could click on it so I had to add this rule for the element with the id "NoAcc"
+        */
     text-decoration: underline;
     font-weight: bold;
 }
@@ -136,8 +141,10 @@ footer{/*this is unnecessary but it was a requirement*/
 }
 
 
-h1, h2, h3, p, li, ul, body{/*sets all these elements to be zero incase a browser sets them to something else, most of these get 
-                            overriden anyway but some of them dont so keep this here*/
+h1, h2, h3, p, li, ul, body{/* sets all these elements to be zero incase a browser sets them 
+                             * to something else, most of these get 
+                             * overriden anyway but some of them dont so keep this here
+                             */
     padding: 0;
     margin: 0;
 }

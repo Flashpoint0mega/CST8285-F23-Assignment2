@@ -150,8 +150,8 @@ function displayMovies(&$result, $currentUser, $conn)
             
         } else {
 
-            # replace with better message
-            echo "No movies found";
+            # lets user know there aren't any movies in their list
+            echo "<h2>You Havent Added Any Movies Yet</h2>";
             echo "<br><a href='Index.php'>Go Back</a>";
         }
 

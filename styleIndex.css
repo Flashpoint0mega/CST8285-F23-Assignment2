@@ -23,3 +23,29 @@ img{
     padding-top: 3%;
     padding-bottom:  3%;
 }
+#lstBox1, #moviebutt{
+    color: white;
+    background-color: #333;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.15em;
+}
+#lstBox1{  /* this is the thing that lets user's add movies to
+            * their list
+            */
+    
+    width: 95%;
+    
+    line-height: 1.6;
+    
+    text-align: center;
+    overflow-y: hidden; /* hides the scroll bar */
+}
+#moviebutt{
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+    margin: 10px;
+}

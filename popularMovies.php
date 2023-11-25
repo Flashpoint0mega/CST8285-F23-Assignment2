@@ -55,7 +55,7 @@
             #  if any records returned, create listbox
             if ($result->num_rows > 0) {
                 # header - replace if necessary
-                echo "<h1>Popular Movies</h1>";
+                echo "<h1>Popular Movies Right Now!</h1> ";
 
                 # declare listbox as multi select
                 echo "<select multiple='multiple' name='lstBox1[]' id='lstBox1' class='form-control'>";
@@ -68,7 +68,7 @@
 
                 #button
                 if(isset($_SESSION["userID"])){
-                    echo "<br><input value='Add' type='Submit' />";
+                    echo "<br><input value='Add Movies' type='Submit' id='moviebutt'/>";
                 }
                 else {
                     echo "<br><p>please sign in to add movies to your list</p>";
