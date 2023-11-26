@@ -145,7 +145,7 @@ function displayMovies(&$result, $currentUser, $conn)
             $_SESSION["myaction"] = "REMOVE";
 
             #button
-            echo "<br><input value='Remove' type='Submit' />";
+            echo "<br><input value='Remove Movies' type='Submit' id='removebutt' />";
 
             
         } else {
