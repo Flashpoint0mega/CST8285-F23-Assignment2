@@ -4,7 +4,6 @@
 
     $db = db_connect();
     ?>
-<h1><?php echo $_SESSION['myuser'] ?>'s list</h1>   
             <?php //getss all the movies in the movie table of the database, will make this more specific later
             /* old
             $sql = "SELECT * FROM movie ";

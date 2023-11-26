@@ -130,7 +130,7 @@ function displayMovies(&$result, $currentUser, $conn)
         #  if any records returned, create listbox
         if ($result->num_rows > 0) {
             # header - replace if necessary
-            echo "<h1>Users List of Movies</h1>";
+            echo "<h1> $_SESSION[myuser]'s Movie list</h1>";
 
             # declare listbox as multi select
             echo "<select multiple='multiple' name='lstBox1[]' id='lstBox1' class='form-control'>";
