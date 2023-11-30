@@ -36,7 +36,15 @@ CREATE TABLE `director` (
 
 LOCK TABLES `director` WRITE;
 /*!40000 ALTER TABLE `director` DISABLE KEYS */;
-INSERT INTO `director` VALUES (1,'Richard','Linklater'),(2,'Wolfgang','Petersen'),(3,'Emma','Tammi');
+INSERT INTO `director` VALUES (1,'Richard','Linklater'),
+(2,'Wolfgang','Petersen'),
+(3,'Emma','Tammi'),
+(4,'Gareth','Edwards'),
+(5,'Anthony','Russo'),
+(6,'Hiroshi','Haraguchi'),
+(7,'Joe','Johnston'),
+(8,'James','Cameron'),
+(9,'Chris','Columbus');
 /*!40000 ALTER TABLE `director` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +68,12 @@ CREATE TABLE `genre` (
 
 LOCK TABLES `genre` WRITE;
 /*!40000 ALTER TABLE `genre` DISABLE KEYS */;
-INSERT INTO `genre` VALUES (1,'Comedy'),(2,'Drama'),(3,'Drama/Horror');
+INSERT INTO `genre` VALUES (1,'Comedy'),
+(2,'Drama'),
+(3,'Drama/Horror'),
+(4,'Action'),
+(5,'Sci-Fi'),
+(6,'Animation');
 /*!40000 ALTER TABLE `genre` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +103,18 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,'School_of_Rock',2003,'some plot',109,1,1,1),(2,'Troy',2004,'some plot',163,2,2,2),(3,'Five_Nights_at_Freddys',2023,'some plot',109,3,3,3);
+INSERT INTO `movie` VALUES ('School of Rock',2003,'some plot',109,1,1,1),
+('Troy',2004,'some plot',163,2,2,2),
+('Five Nights at Freddys',2023,'some plot',109,3,3,3)
+('Godzilla',2014,123,4,4,1),
+('Avengers Endgame',2019,181,5,5,1),
+('Evangelion: 1.0 You Are (Not) Alone',2007,98,6,6,1),
+('Jurassic Park III',2001,92,7,4,1),
+('Terminator 2: Judgment Day',1991,137,8,5,3),
+('Home Alone',1990,103,9,1,2);
+UPDATE movie
+SET plot='some plot' 
+WHERE plot IS NULL;
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +166,7 @@ CREATE TABLE `rating` (
 
 LOCK TABLES `rating` WRITE;
 /*!40000 ALTER TABLE `rating` DISABLE KEYS */;
-INSERT INTO `rating` VALUES (1,'PG 13'),(2,'PG'),(3,'MA');
+INSERT INTO `rating` VALUES (1,'PG 13'),(2,'PG'),(3,'MA'),(4,'G');
 /*!40000 ALTER TABLE `rating` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,7 +191,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'user3','dd1236789'),(2,'user23','red1'),(3,'user45','blue21'),(4,'peterdrak','peter1234!'),(5,'sebadesl','desl0079');
+INSERT INTO `user` VALUES (1,'user3','dd1236789'),(2,'user23','red1'),(3,'user45','blue21'),(4,'peterdrak','peter1234!'),(5,'sebadesl','desl0079'),(6,'user1','user1');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
