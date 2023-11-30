@@ -34,7 +34,6 @@ img{
     line-height: 1.6;
     
     text-align: center;
-    overflow-y: hidden; /* hides the scroll bar */
 }
 #removebutt{
     border: none;

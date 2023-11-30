@@ -9,6 +9,7 @@
             $sql .= "ORDER BY movieID";
             */
             $sql = "select movie.movieID, title, yearCreated, length, concat(firstname,' ',lastname) as director, ratingName, genre_name from movie left outer join director on movie.directorID = director.directorID left outer join rating on movie.ratingID = rating.ratingID left outer join genre on movie.genreID = genre.genreID";
+            $sql = $sql . " where title like '%" . $searchParam . "%'";
             $result_set = mysqli_query($db,$sql); //uses the querry with the databse and store the result
             ?>
 

@@ -44,10 +44,10 @@ $_SESSION["error"]="";
                 }
                 ?></a></p>
             </div>
-            <div id="searchbar">
+            <!--<div id="searchbar">
                 <input type="text" placeholder="Search:" id="search" name="search bar" size="60">
                 <p id="searchbutt"><a href="Search.php">🔍</a></p>
-            </div>
+            </div> -->
         </header>
         <form method="POST">
         <div id="popularwrap"> 

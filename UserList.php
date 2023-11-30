@@ -40,10 +40,10 @@ if (isset($_SESSION["myuser"])) { //if user is not logged in, they can't access 
                 }
                 ?></a></p>
             </div>
-            <div id="searchbar">
+            <!--<div id="searchbar">
                 <input type="text" placeholder="Search:" id="search" name="search bar" size="60">
                 <p id="searchbutt"><a href="Search.php">🔍</a></p>
-            </div>
+            </div> -->
         </header>
         <div id="contentwrap">
             <?php 

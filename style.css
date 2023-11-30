@@ -30,10 +30,10 @@ header {
         font-size: 150%;
     }
 
-    #searchbar{
+    /*#searchbar{
         display: flex;
         text-align: left;
-    }
+    }*/
     
     .sidebutton{ /* moves the "my movie list" and sign in buttons to the right */
         display: flex;
@@ -52,10 +52,10 @@ header {
         border-radius: 15px;
         border-width: 2px;
     }
-    #searchbutt{  /* adds the padding to the search button */
+    /*#searchbutt{ adds the padding to the search button
         padding-left: 5px;
         padding-right: 5px;
-    }
+    }*/
     #ulist{  /* adds the background colour and border to the "my movie list" */
         background-color: #AAAAAA;
         border-color: #000000;
@@ -67,7 +67,7 @@ header {
         background-color: #C1B8B8;
         
     }
-    #signbutt, #searchbutt, .nav_list{ /* adds the background colour and border to the navigation, sign in button and search button */
+    #signbutt, /*#searchbutt,*/ .nav_list{ /* adds the background colour and border to the navigation, sign in button and search button */
         background-color: #BF3944;
         border-color: #000000;
         border-style:solid;
@@ -75,7 +75,7 @@ header {
         transition: all 100ms;
     }
 
-    #signbutt:hover, #searchbutt:hover, .nav_list:hover{ /* adds the background colour and border to the navigation, sign in button and search button */
+    #signbutt:hover, /*#searchbutt:hover,*/ .nav_list:hover{ /* adds the background colour and border to the navigation, sign in button and search button */
         background-color: #E53947;
     }
     
@@ -88,7 +88,29 @@ body {/*set background colour, font colour, and font family along with the line 
     font-family: 'Exo 2', sans-serif;
     line-height: 1.6;
     text-align: center;
+    #searchbar{
+        display: inline;
+    }
+    #search{
+        line-height: 1.6;
+        display: inline;
+        padding-top: 5px;
+        width: 55%;
+    }
+    #searchbutt{ /* adds the background colour and border to the search button */
+        background-color: #BF3944;
+        border-color: #000000;
+        border-style:solid;
+        border-width: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        transition: all 100ms;
+        display: inline;
+    }
     
+    #searchbutt:hover{ /* adds the background colour and border to the navigation, sign in button and search button */
+        background-color: #E53947;
+    }
     
     
 }
