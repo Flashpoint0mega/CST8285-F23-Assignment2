@@ -33,11 +33,11 @@ if (isset($_SESSION["myuser"])) { //if user is not logged in, they can't access 
             <div class="sidebutton">
                 
                 <p id="signbutt"><a href="SignIn.php"> <?php if (isset($_SESSION["myuser"])) {
-                    //if user is logged in changes the sign in button to show their username, will change this to the log in button during finalization
-                    echo $_SESSION["myuser"] ; //'myuser' is the variable name for the users name and credentials
-                } else {
-                    echo 'Sign in';
-                }
+                     //if user is logged in changes the sign in button to a sign out button
+                     echo 'Sign Out';
+                    } else {
+                        echo 'Sign in';
+                    }
                 ?></a></p>
             </div>
             <!--<div id="searchbar">

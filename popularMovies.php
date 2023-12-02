@@ -8,7 +8,7 @@
     $conn = OpenCon();
 
     # control statement needs to be removed
-    echo "Connected Successfully";
+    //echo "Connected Successfully";
 
 
     # the only action availible from this screen is ADD
@@ -43,10 +43,17 @@
             
             <p id="sitename"><a href="Index.php">My Movie List</a></p>
             <div class="sidebutton">
-                <p id="ulist"><a href="UserList.php"> My Movie List </a></p>
-                <p id="signbutt"><a href="SignIn.html">'; 
+                <p id="ulist"><a href="UserList.php">';  if (isset($_SESSION["myuser"])) 
+                { 
+                    echo $_SESSION["myuser"];
+                    echo "'s ";
+                } else {
+                    echo 'My ';
+                }; 
+                echo 'Movie List</a></p>'; 
+                echo '<p id="signbutt"><a href="SignIn.php">';
                 if (isset($_SESSION["myuser"])) {
-                    echo $_SESSION["myuser"] ;
+                    echo "Sign out" ;
                 } else {
                     echo "Sign in";
                 }

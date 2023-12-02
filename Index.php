@@ -21,38 +21,32 @@ $_SESSION["error"]="";
     $db = db_connect();
     
     ?>
-    <?php //logs out user if they click the logout button
-        if(array_key_exists('button1', $_POST)) { 
-            button1(); 
-        }
-        function button1() { //function to log out user
-            session_destroy();
-            header("location: Index.php");
-        } 
-    ?>
         <header>
             
             
             <p id="sitename"><a href="Index.php">My Movie List</a></p>
             <div class="sidebutton"> 
-                <p id="ulist"><a href="UserList.php"> My Movie List </a></p>
+                <p id="ulist"><a href="UserList.php"><?php if (isset($_SESSION["myuser"])) 
+                {   //if user is signed in sets the hyperlink to userlist.php to say their username's list, 
+                    //otheriwse it sets it to just say "my movie list"
+                    echo $_SESSION["myuser"];
+                    echo "'s ";
+                } else {
+                    echo 'My ';
+                } ?>Movie List</a></p>
+
                 <p id="signbutt"><a href="SignIn.php"> <?php if (isset($_SESSION["myuser"])) { 
-                    //if user is logged in changes the sign in button to show their username, will change this to the log in button during finalization
-                    echo $_SESSION["myuser"] ;//'myuser' is the variable name for the users name and credentials
+                    //if user is logged in changes the sign in button to a sign out button
+                    echo 'Sign Out';
                 } else {
                     echo 'Sign in';
                 }
                 ?></a></p>
             </div>
-            <!--<div id="searchbar">
-                <input type="text" placeholder="Search:" id="search" name="search bar" size="60">
-                <p id="searchbutt"><a href="Search.php">🔍</a></p>
-            </div> -->
         </header>
         <form method="POST">
         <div id="popularwrap"> 
         </form>
-        <input type="submit" name="button1" class="button" value="logout" />
         <p>userID:<?php if (isset($_SESSION['userID'])) {
             echo $_SESSION['userID'];} 
             else { echo ' Not signed in';}?></p>

@@ -1,5 +1,12 @@
 <?php
 session_start();
+//if user is signed in and clicks the sign out button this will sign them out
+if (isset($_SESSION["myuser"])){
+    unset($_SESSION['myuser']);
+    unset($_SESSION['userID']);
+    header("location: Index.php");
+    
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +26,7 @@ session_start();
             <nav>
                 <!--links to the other pages-->
                 <p class="nav_list"><a href="index.php"> Home </a></p>
-                <p class="nav_list" id="sitename"><a href="Index.php">Site Name</a></p>
+                <p class="nav_list" id="sitename"><a href="Index.php">My Movie List</a></p>
                 <p class="nav_list"><a href="Search.html"> Search </a></p>
                 
             </nav>

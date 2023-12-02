@@ -41,7 +41,7 @@ header {
         text-decoration: none;
         font-weight: bold;
         padding-right: 5%;      
-        
+        padding-bottom: 5px;
     }
     #ulist, #signbutt{ /* adds the padding and rounding for the "my movie list" and sign in buttons */
         margin-left: 15px;
