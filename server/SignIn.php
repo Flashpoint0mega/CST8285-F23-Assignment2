@@ -37,7 +37,7 @@ if (isset($_SESSION["myuser"])){
         <!-- when user clicks submit, it will send this data through the SignIn.js 
             file and make sure the data is fine before sending it to the Login.php file-->
 
-            <input type="text" placeholder="Username or Email:" id="username" name="Uname"  autocomplete="off"><br>
+            <input type="text" placeholder="Username:" id="username" name="Uname"  autocomplete="off"><br>
             <input type="password" placeholder="Password:" id="password" name="Pass"  autocomplete="new-password"><br>
             
 
