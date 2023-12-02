@@ -1,3 +1,4 @@
+//Written by Sebastian Deslauriers 
 function validate() {
     let Uname = document.getElementById('username').value;
     let pass1 = document.getElementById('password').value;
@@ -17,25 +18,7 @@ function validate() {
         return false;
     }
     else{
-    };
-
-    if(pass1.trim().length < 8){ //make sure password is more than 8 characters long
-        alert('Password must be more than 8 characters long.');
-        
-        
-        return false;
-    }
-    else{
-        
-        };
-    if(pass1.trim().length === 0 || pass1 === null){ //makes sure both passwords are not empty
-        alert('Password must not be blank.');
-        
-        return false;
-    }
-    else{
-        
+    };        
     
     
-}
 }

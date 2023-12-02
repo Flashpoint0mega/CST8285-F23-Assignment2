@@ -14,8 +14,8 @@ if (isset($_SESSION["myuser"])){
         <meta charset="UTF-8">
         <title>Sign In</title>
         <!--css used-->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="styleSign.css">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/styleSign.css">
         <!-- JS used -->
         <!--<script src="SignIn.js"></script> -->
         
@@ -24,10 +24,9 @@ if (isset($_SESSION["myuser"])){
     <body>
         <header>
             <nav>
-                <!--links to the other pages-->
-                <p class="nav_list"><a href="index.php"> Home </a></p>
+                <!--link to the main page-->                
                 <p class="nav_list" id="sitename"><a href="Index.php">My Movie List</a></p>
-                <p class="nav_list"><a href="Search.html"> Search </a></p>
+                
                 
             </nav>
     
@@ -56,7 +55,7 @@ if (isset($_SESSION["myuser"])){
                 }
         ?></p>
         <!-- if user does not have an account, they can make one here-->
-        <p id="Dont">Don't have an account?<br><a id="NoAcc" href="SignUp.html">Sign Up</a></p>
+        <p id="Dont">Don't have an account?<br><a id="NoAcc" href="../pages/SignUp.html">Sign Up</a></p>
     </div>
     
     </body>

@@ -19,6 +19,9 @@
 -- Table structure for table `director`
 --
 
+-- Written by Peter Drakulic
+-- Modified by Sebastian Deslauriers
+
 DROP TABLE IF EXISTS `director`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;

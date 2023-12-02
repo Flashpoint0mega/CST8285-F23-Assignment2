@@ -1,4 +1,6 @@
 <?php
+    # Written by Peter Drakulic
+    // Modified by Sebastian Deslauriers 
 
 if(!empty($_POST['lstBox1']))
 {
@@ -47,10 +49,7 @@ if(!empty($_POST['lstBox1']))
             echo "Error: " . $conn->error;
         } else 
         {
-            /* OLD
-            #call function to display the results as a list box 
-            displayMovies($result, $currentUser, $conn);
-            */
+            //Redirects user to their list
             header("location: UserList.php");
         }
     }
@@ -89,13 +88,7 @@ if(!empty($_POST['lstBox1']))
             echo "Error: " . $conn->error;
         } else 
         {
-            /* OLD
-             # control statement needs to be removed
-            echo "Sucessfully removed<br>";
-
-             #call function to display the results as a listbox
-            displayMovies($result, $currentUser, $conn);
-            */
+            //redirects user to their list
             header("location: UserList.php");
             
         }

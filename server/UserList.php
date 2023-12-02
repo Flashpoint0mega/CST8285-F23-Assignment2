@@ -14,8 +14,8 @@ if (isset($_SESSION["myuser"])) { //if user is not logged in, they can't access 
         <title>Movie List</title>
         <meta name="author" content="Sebastian Deslauriers">
         <!--css used-->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="styleList.css"> 
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/styleList.css"> 
     </head>
 
     <body>

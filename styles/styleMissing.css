@@ -1,3 +1,4 @@
+/* CSS written by Sebastian Deslauriers */
 #contentwrap{
     background-color: #CcCACA;
     margin-left: 25%;
@@ -11,7 +12,7 @@
 button{
     margin-top: 2.5%;
 }
-#moviename{ /* adjust the width of the email, username and password text fields */
+#moviename{ /* adjust the width of the name field becasue some movies names are long */
     width: 65%;
 }
 .moviedetails{

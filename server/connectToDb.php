@@ -1,4 +1,5 @@
 <?php
+# Written by Peter Drakulic
 function OpenCon()
 {
   $servername = "localhost";

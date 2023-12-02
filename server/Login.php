@@ -1,4 +1,5 @@
 <?php
+//Written by Sebastian Deslauriers 
 session_start(); //starts a session, this is to save the username for later
 require_once('db_credentials.php'); //gets the cradentials for the database then connects to the database
 require_once('database.php');

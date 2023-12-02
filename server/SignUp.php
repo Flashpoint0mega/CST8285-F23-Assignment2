@@ -1,5 +1,5 @@
 <?php
-
+//Written by Sebastian Deslauriers 
 require_once('db_credentials.php');//gets the cradentials for the database then connects to the database
 require_once('database.php');
 
@@ -26,7 +26,7 @@ $db = db_connect();
             header("Location: Index.php?id=  $id");
             
     } else {
-            header("Location Missing.html");
+            header("Location Missing.php");
     }
 
 

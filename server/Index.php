@@ -9,8 +9,8 @@ $_SESSION["error"]="";
         <title>Welcome</title>
         <meta name="author" content="Sebastian Deslauriers">
         <!--css used-->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="styleIndex.css"> 
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/styleIndex.css"> 
     </head>
     
     <body>
@@ -47,9 +47,17 @@ $_SESSION["error"]="";
         <form method="POST">
         <div id="popularwrap"> 
         </form>
-        <p>userID:<?php if (isset($_SESSION['userID'])) {
-            echo $_SESSION['userID'];} 
-            else { echo ' Not signed in';}?></p>
+        <?php if (isset($_SESSION["adderror"])) {
+            /*
+             *this display's an error message, if there is one
+             */     
+                    echo '<p>';
+                    echo $_SESSION["adderror"] ;
+                    echo '</p>';
+                } else {
+                    echo ''; //empty string if there is no error
+                }
+                ?>
             
             
             <?php require 'popularMovies.php'?>
