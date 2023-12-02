@@ -39,4 +39,4 @@
             <?php } ?>
             </table>
             <p style="text-decoration: underline;" style="font-weight: bold;">
-            <a href="Missing.php">Don't have the movie your looking for?</a></p>
+            <a href="Missing.php">Don't have the movie you're looking for?</a></p>

@@ -166,7 +166,7 @@ echo "</form>";
                 // tells user that what they searched for isnt available
                 echo "<h2>No movies match that search term</h2>";
                 echo "<p style='text-decoration: underline;' style='font-weight: bold;'>
-                <a href='Missing.php'>Don't have the movie your looking for?</a></p>";
+                <a href='Missing.php'>Don't have the movie you're looking for?</a></p>";
             }
 
             # end of form
