@@ -27,7 +27,7 @@
             <?php while($results = mysqli_fetch_assoc($result_set)) { ?>  <!-- while there are results, write this code -->
                 <tr class="movierow">
                     <!-- puts the movieID as the link to the poster so we can use the same numbering sceme for every photo -->
-                    <td><img src="../posters/<?php echo $results['movieID']; ?>.png"></td> 
+                    <td><img src="../posters/<?php if ($results['movieID'] > 9){echo '10';}else{echo $results['movieID'];} ?>.png"></td>
                     <td><?php echo $results['title']; ?></td>
                     <td><?php echo $results['yearCreated']; ?></td>
                     <td><?php echo $results['length']; ?> minutes</td>
