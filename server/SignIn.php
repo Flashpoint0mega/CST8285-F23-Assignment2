@@ -1,4 +1,6 @@
 <?php
+//Written by Sebastian Deslauriers 
+//Peter Drakulic
 session_start();
 //if user is signed in and clicks the sign out button this will sign them out
 if (isset($_SESSION["myuser"])){

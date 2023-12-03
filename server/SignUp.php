@@ -1,5 +1,6 @@
 <?php
-//Written by Sebastian Deslauriers 
+//Written by Sebastian Deslauriers
+//Peter Drakulic
 require_once('db_credentials.php');//gets the cradentials for the database then connects to the database
 require_once('database.php');
 

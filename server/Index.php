@@ -8,6 +8,7 @@ $_SESSION["error"]="";
         <meta charset="UTF-8">
         <title>Welcome</title>
         <meta name="author" content="Sebastian Deslauriers">
+        <!-- also made by Peter Drakulic-->
         <!--css used-->
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/styleIndex.css"> 
@@ -60,7 +61,7 @@ $_SESSION["error"]="";
                 ?>
             
             
-            <?php require 'popularMovies.php'?>
+            <?php require 'popularMovies.php'?> <!--made by Peter Drakulic-->
             <?php include 'movietable.php'?>            
 
         </div>

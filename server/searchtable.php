@@ -1,5 +1,6 @@
             <?php 
             //written by Sebastian Deslauriers
+            //Peter Drakulic
             require_once('db_credentials.php');
             require_once('database.php');
         

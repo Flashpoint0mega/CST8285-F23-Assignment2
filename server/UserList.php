@@ -1,4 +1,6 @@
 <?php
+//Written by Sebastian Deslauriers 
+//Peter Drakulic
 session_start();
 if (isset($_SESSION["myuser"])) { //if user is not logged in, they can't access this page
     
