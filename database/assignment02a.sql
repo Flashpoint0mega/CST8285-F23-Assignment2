@@ -81,75 +81,6 @@ INSERT INTO `genre` VALUES (1,'Comedy'),
 UNLOCK TABLES;
 
 --
--- Table structure for table `movie`
---
-
-DROP TABLE IF EXISTS `movie`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `movie` (
-  `movieID` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) DEFAULT NULL,
-  `yearCreated` int DEFAULT NULL,
-  `plot` varchar(500) DEFAULT NULL,
-  `length` int DEFAULT NULL,
-  `directorID` int DEFAULT NULL,
-  `GenreID` int DEFAULT NULL,
-  `RatingID` int DEFAULT NULL,
-  PRIMARY KEY (`movieID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `movie`
---
-
-LOCK TABLES `movie` WRITE;
-/*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES ('School of Rock',2003,'some plot',109,1,1,1),
-('Troy',2004,'some plot',163,2,2,2),
-('Five Nights at Freddys',2023,'some plot',109,3,3,3),
-('Godzilla',2014,123,4,4,1),
-('Avengers Endgame',2019,181,5,5,1),
-('Evangelion: 1.0 You Are (Not) Alone',2007,98,6,6,1),
-('Jurassic Park III',2001,92,7,4,1),
-('Terminator 2: Judgment Day',1991,137,8,5,3),
-('Home Alone',1990,103,9,1,2);
-UPDATE movie
-SET plot='some plot' 
-WHERE plot IS NULL;
-/*!40000 ALTER TABLE `movie` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `movieuser`
---
-
-DROP TABLE IF EXISTS `movieuser`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `movieuser` (
-  `movieID` int NOT NULL,
-  `userID` int NOT NULL,
-  PRIMARY KEY (`movieID`,`userID`),
-  KEY `movieID` (`movieID`),
-  KEY `userID` (`userID`),
-  CONSTRAINT `movieuser_ibfk_1` FOREIGN KEY (`movieID`) REFERENCES `movie` (`movieID`),
-  CONSTRAINT `movieuser_ibfk_2` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `movieuser`
---
-
-LOCK TABLES `movieuser` WRITE;
-/*!40000 ALTER TABLE `movieuser` DISABLE KEYS */;
-INSERT INTO `movieuser` VALUES (1,2),(2,2),(3,3);
-/*!40000 ALTER TABLE `movieuser` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `rating`
 --
 
@@ -198,6 +129,75 @@ INSERT INTO `user` VALUES (1,'user3','dd1236789'),(2,'user23','red1'),(3,'user45
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+DROP TABLE IF EXISTS `movie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+
+--
+-- Table structure for table `movie`
+--
+
+CREATE TABLE `movie` (
+  `movieID` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `yearCreated` int DEFAULT NULL,
+  `plot` varchar(500) DEFAULT NULL,
+  `length` int DEFAULT NULL,
+  `directorID` int DEFAULT NULL,
+  `GenreID` int DEFAULT NULL,
+  `RatingID` int DEFAULT NULL,
+  PRIMARY KEY (`movieID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movie`
+--
+
+LOCK TABLES `movie` WRITE;
+/*!40000 ALTER TABLE `movie` DISABLE KEYS */;
+INSERT INTO `movie` VALUES (1,'School of Rock',2003,'some plot',109,1,1,1),
+(2,'Troy',2004,'some plot',163,2,2,2),
+(3,'Five Nights at Freddys',2023,'some plot',109,3,3,3),
+(4,'Godzilla',2014,'some plot',123,4,4,1),
+(5,'Avengers Endgame',2019,'some plot',181,5,5,1),
+(6,'Evangelion: 1.0 You Are (Not) Alone',2007,'some plot',98,6,6,1),
+(7,'Jurassic Park III',2001,'some plot',92,7,4,1),
+(8,'Terminator 2: Judgment Day',1991,'some plot',137,8,5,3),
+(9,'Home Alone',1990,'some plot',103,9,1,2);
+UPDATE movie
+SET plot='some plot' 
+WHERE plot IS NULL;
+/*!40000 ALTER TABLE `movie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `movieuser`
+--
+
+DROP TABLE IF EXISTS `movieuser`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `movieuser` (
+  `movieID` int NOT NULL,
+  `userID` int NOT NULL,
+  PRIMARY KEY (`movieID`,`userID`),
+  KEY `movieID` (`movieID`),
+  KEY `userID` (`userID`),
+  CONSTRAINT `movieuser_ibfk_1` FOREIGN KEY (`movieID`) REFERENCES `movie` (`movieID`),
+  CONSTRAINT `movieuser_ibfk_2` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `movieuser`
+--
+
+LOCK TABLES `movieuser` WRITE;
+/*!40000 ALTER TABLE `movieuser` DISABLE KEYS */;
+INSERT INTO `movieuser` VALUES (1,2),(2,2),(3,3);
+/*!40000 ALTER TABLE `movieuser` ENABLE KEYS */;
+UNLOCK TABLES;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
