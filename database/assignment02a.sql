@@ -108,7 +108,7 @@ LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
 INSERT INTO `movie` VALUES ('School of Rock',2003,'some plot',109,1,1,1),
 ('Troy',2004,'some plot',163,2,2,2),
-('Five Nights at Freddys',2023,'some plot',109,3,3,3)
+('Five Nights at Freddys',2023,'some plot',109,3,3,3),
 ('Godzilla',2014,123,4,4,1),
 ('Avengers Endgame',2019,181,5,5,1),
 ('Evangelion: 1.0 You Are (Not) Alone',2007,98,6,6,1),
