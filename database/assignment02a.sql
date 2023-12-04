@@ -154,6 +154,11 @@ CREATE TABLE `movie` (
 -- Dumping data for table `movie`
 --
 
+alter table movie
+add FOREIGN KEY (directorID) REFERENCES director (DirectorID),
+add FOREIGN KEY (genreID) REFERENCES genre (genreID),
+add FOREIGN KEY (ratingID) REFERENCES rating (RatingID);
+
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
 INSERT INTO `movie` VALUES (1,'School of Rock',2003,'some plot',109,1,1,1),
